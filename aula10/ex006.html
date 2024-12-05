@@ -20,12 +20,12 @@
         Interaja...
     </div>
     <script>
-        var area = document.getElementById('area')
-        area.addEventListener('click', clicar)
-        area.addEventListener('mouseenter', mouse_dentro)
-        area.addEventListener('mouseout', sair)
-        function clicar(){
-            area.innerText = 'Clicou!'
+        var area = document.getElementById('area') //Pegando o id da div e atribuindo a uma variavel
+        area.addEventListener('click', clicar) //Colocando um "escutador" para aguardar o evento clicar
+        area.addEventListener('mouseenter', mouse_dentro) // Colocando um "escutador" para aguardar o evento mouse_dentro
+        area.addEventListener('mouseout', sair)//Colocando um "escutador" para aguardar o evento sair
+        function clicar(){ //Função para quando clicar o mouse no objeto
+            area.innerText = 'Clicou!' //Alterando o texto da div area
             area.style.background = 'red'
         }
         function mouse_dentro(){
