@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises</title>
+    <style>
+        body{
+            background: blue;
+            color: white;
+            font: normal 16px Arial
+        }
+        input{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descobrindo se é estrangeiro ou não:</h1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar(){
+            var txtp = document.getElementById('txtpais')
+            var pais = txtp.value.toString().toUpperCase()
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Você é do(a) ${pais}</p>`
+            if (pais == 'BRASIL'){
+                res.innerHTML += '<p>Você é <strong>brasileiro</strong></p>'
+            }else{
+                res.innerHTML += '<p>Você é <strong>estrangeiro</strong>'
+            }
+        }
+        
+    </script>
+</body>
+</html>
